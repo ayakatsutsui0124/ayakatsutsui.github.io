@@ -21,7 +21,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--bg);
+  background: var(--paper);
   font-family: "Noto Sans JP", system-ui, sans-serif;
   line-height: 1.8;
 }
@@ -32,7 +32,7 @@ a {
 }
 
 .site-header {
-  position: fixed;
+  position: sticky;
   z-index: 10;
   top: 0;
   left: 0;
@@ -42,8 +42,10 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 18px clamp(20px, 5vw, 64px);
-  color: var(--paper);
-  background: linear-gradient(180deg, rgba(36, 32, 29, 0.62), rgba(36, 32, 29, 0));
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(18px);
 }
 
 .brand {
@@ -54,6 +56,8 @@ a {
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: clamp(14px, 3vw, 32px);
   font-size: 0.88rem;
   font-weight: 700;
@@ -67,51 +71,76 @@ a {
   opacity: 1;
 }
 
-.hero {
-  min-height: 92vh;
+.profile-hero {
+  width: min(1120px, calc(100% - 40px));
+  min-height: 420px;
+  margin: 0 auto;
   display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
   align-items: center;
-  padding: 120px clamp(20px, 7vw, 92px) 80px;
-  background:
-    linear-gradient(90deg, rgba(26, 25, 22, 0.78), rgba(26, 25, 22, 0.38) 46%, rgba(26, 25, 22, 0.08)),
-    url("assets/hero-workspace.png") center / cover;
+  gap: clamp(28px, 5vw, 58px);
+  padding: 30px 0 32px;
+  background: var(--paper);
 }
 
-.hero__content {
-  width: min(680px, 100%);
-  color: var(--paper);
+.profile-copy {
+  width: min(760px, 100%);
+  color: var(--ink);
 }
 
-.eyebrow,
-.section-label {
-  margin: 0 0 12px;
-  color: var(--coral);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.hero h1 {
+.profile-hero h1 {
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(4rem, 10vw, 8.8rem);
-  line-height: 0.92;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1;
   letter-spacing: 0;
 }
 
-.lead {
-  width: min(560px, 100%);
-  margin: 28px 0 0;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
+.profile-text {
+  width: min(720px, 100%);
+  margin: 30px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.95;
 }
 
-.hero__actions {
+.profile-email {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.profile-text p {
+  margin: 0;
+}
+
+.profile-text p + p {
+  margin-top: 18px;
+}
+
+.profile-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 36px;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--charcoal);
+  background: var(--paper);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.profile-links a:hover {
+  border-color: var(--coral);
+  color: var(--coral);
 }
 
 .button {
@@ -132,49 +161,95 @@ a {
 }
 
 .button--ghost {
-  color: var(--paper);
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
+  color: var(--ink);
+  background: transparent;
+}
+
+.profile-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(201, 105, 85, 0.12), rgba(114, 131, 111, 0.16)),
+    var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.profile-photo span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
 }
 
 .section {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 92px 0;
+  padding: 24px 0;
+}
+
+.page-hero {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 88px 0 28px;
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.6rem, 8vw, 7rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.page-hero p {
+  width: min(720px, 100%);
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
 .section h2 {
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
-  line-height: 1.08;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1;
   letter-spacing: 0;
 }
 
-.section--intro {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.8fr);
-  gap: clamp(32px, 6vw, 72px);
-  align-items: end;
-}
-
-.section--intro > p,
-.section--contact p {
-  margin: 0;
+.section-summary {
+  width: min(720px, 100%);
+  margin: 16px 0 0;
   color: var(--muted);
-  font-size: 1rem;
 }
 
-.feature-grid {
+.text-link {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--charcoal);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 4px;
+}
+
+.text-link:hover {
+  color: var(--coral);
+  text-decoration-color: var(--coral);
+}
+
+.news-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 22px;
+  gap: 10px;
+  margin-top: 12px;
 }
 
-.feature,
-.work-item {
-  min-height: 220px;
+.news-year {
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -182,73 +257,175 @@ a {
   box-shadow: 0 12px 36px rgba(55, 45, 36, 0.06);
 }
 
-.feature span {
+.news-year h3 {
+  margin: 0 0 14px;
   color: var(--sage);
-  font-weight: 700;
-}
-
-.feature h3,
-.work-item h3 {
-  margin: 42px 0 10px;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 
-.feature p,
-.work-item p {
+.news-year ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.news-year li {
+  color: var(--muted);
+}
+
+.news-year time {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.research-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.research-item {
+  display: grid;
+  grid-template-columns: minmax(170px, 250px) minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 36px);
+  align-items: center;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 12px 36px rgba(55, 45, 36, 0.06);
+}
+
+.research-image {
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  background:
+    linear-gradient(135deg, rgba(114, 131, 111, 0.16), rgba(201, 105, 85, 0.1)),
+    var(--bg);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.research-content h3 {
+  margin: 0 0 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.research-authors {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.research-content p {
   margin: 0;
   color: var(--muted);
 }
 
-.section--work {
-  width: 100%;
-  max-width: none;
-  padding: 96px clamp(20px, 5vw, 64px);
-  color: var(--paper);
-  background: var(--charcoal);
+.research-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
 }
 
-.section-heading,
-.work-list {
-  width: min(1120px, 100%);
-  margin-inline: auto;
-}
-
-.work-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-top: 26px;
-}
-
-.work-item {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: none;
-}
-
-.work-item__meta {
-  color: #d6b8ad;
-  font-size: 0.82rem;
+.research-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--charcoal);
+  font-size: 0.86rem;
   font-weight: 700;
 }
 
-.work-item h3 {
-  color: var(--paper);
+.research-links a:hover {
+  border-color: var(--coral);
+  color: var(--coral);
 }
 
-.section--contact {
-  text-align: center;
+.publication-section {
+  padding-top: 56px;
 }
 
-.section--contact p {
-  width: min(620px, 100%);
-  margin: 18px auto 28px;
+.publication-list {
+  display: grid;
+  gap: 18px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.section--contact .button {
-  color: var(--paper);
+.publication-item {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 24px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 12px 36px rgba(55, 45, 36, 0.06);
+}
+
+.publication-year {
+  margin: 0;
+  color: var(--sage);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.publication-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.publication-authors,
+.publication-venue {
+  margin: 0;
+  color: var(--muted);
+}
+
+.publication-authors {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.publication-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--charcoal);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.publication-links a:hover {
+  border-color: var(--coral);
+  color: var(--coral);
 }
 
 .site-footer {
@@ -260,7 +437,7 @@ a {
 
 @media (max-width: 780px) {
   .site-header {
-    align-items: flex-start;
+    align-items: center;
     padding: 14px 18px;
   }
 
@@ -269,31 +446,38 @@ a {
     font-size: 0.78rem;
   }
 
-  .hero {
-    min-height: 86vh;
-    padding: 104px 20px 54px;
-    background:
-      linear-gradient(180deg, rgba(26, 25, 22, 0.75), rgba(26, 25, 22, 0.4)),
-      url("assets/hero-workspace.png") center / cover;
+  .profile-hero {
+    width: min(100% - 32px, 1120px);
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 26px 0 28px;
   }
 
-  .hero h1 {
-    font-size: clamp(3.4rem, 18vw, 5.2rem);
+  .profile-hero h1 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .profile-photo {
+    width: min(240px, 100%);
   }
 
   .section {
     width: min(100% - 32px, 1120px);
-    padding: 68px 0;
+    padding: 24px 0;
   }
 
-  .section--intro,
-  .feature-grid,
-  .work-list {
+  .page-hero {
+    width: min(100% - 32px, 1120px);
+    padding: 56px 0 12px;
+  }
+
+  .research-item {
     grid-template-columns: 1fr;
   }
 
-  .feature,
-  .work-item {
-    min-height: 190px;
+  .publication-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }

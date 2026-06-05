@@ -21,85 +21,342 @@
       <a class="brand" href="#top">Ayaka Tsutsui</a>
       <nav class="nav" aria-label="メインナビゲーション">
         <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <!-- <a href="publications.html">Publications</a> -->
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__content">
-          <p class="eyebrow">Personal Portfolio</p>
+      <section id="about" class="profile-hero" aria-labelledby="hero-title">
+        <div class="profile-copy">
           <h1 id="hero-title">Ayaka Tsutsui</h1>
-          <p class="lead">
-            学び、考え、つくることを通して、日々のアイデアを形にしていきます。
-          </p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="#work">制作を見る</a>
-            <a class="button button--ghost" href="#contact">連絡する</a>
+          <p class="profile-email">ayakatsutsui1128 [at] digitalnature.slis.tsukuba.ac.jp</p>
+          <div class="profile-text">
+            <p>
+              I am a Ph.D. student at the University of Tsukuba, advised by Yoichi Ochiai. I am also a part-time researcher at Miraikan (The National Museum of Emerging Science and Innovation), where I work with Chieko Asakawa and Hironobu Takagi.
+            </p>
+            <p>
+              My research lies at the intersection of human-computer interaction, accessibility, wearable devices, and interaction design.
+            </p>
+            <p>
+              I received my B.S. from the College of Knowledge and Library Sciences (KLIS) at the University of Tsukuba and my M.S. from the Graduate School of Comprehensive Human Sciences, University of Tsukuba, both under the supervision of Yoichi Ochiai.
+            </p>
+          </div>
+          <div class="profile-links" aria-label="プロフィールリンク">
+            <a href="https://scholar.google.com/citations?user=X8KCWFUAAAAJ&amp;hl=ja" aria-label="Google Scholar">Google Scholar</a>
+            <a href="https://researchmap.jp/tsutsui.ayaka.2025" aria-label="researchmap">researchmap</a>
+            <!-- <a href="#" aria-label="GitHub">GitHub</a> -->
+            <a href="https://www.linkedin.com/in/ayaka-tsutsui-a34637187/?originalSubdomain=jp" aria-label="LinkedIn">LinkedIn</a>
           </div>
         </div>
-      </section>
-
-      <section id="about" class="section section--intro">
-        <div>
-          <p class="section-label">About</p>
-          <h2>自分らしい視点で、丁寧に積み重ねる。</h2>
-        </div>
-        <p>
-          ここには自己紹介を書きます。興味のある分野、これまで取り組んできたこと、
-          これから挑戦したいことを、短く自然な言葉でまとめると読みやすくなります。
-        </p>
-      </section>
-
-      <section class="section">
-        <p class="section-label">Focus</p>
-        <div class="feature-grid">
-          <article class="feature">
-            <span>01</span>
-            <h3>Design</h3>
-            <p>見やすさ、余白、言葉のトーンを大切にした画面づくり。</p>
-          </article>
-          <article class="feature">
-            <span>02</span>
-            <h3>Research</h3>
-            <p>気になったことを調べ、整理し、自分の考えに変えていくこと。</p>
-          </article>
-          <article class="feature">
-            <span>03</span>
-            <h3>Creation</h3>
-            <p>小さなアイデアから、使える形・見せられる形まで仕上げること。</p>
-          </article>
+        <div class="profile-photo" aria-label="プロフィール写真">
+          <span>Profile Photo</span>
         </div>
       </section>
 
-      <section id="work" class="section section--work">
-        <div class="section-heading">
-          <p class="section-label">Work</p>
-          <h2>これから増やしていく制作物</h2>
-        </div>
-        <div class="work-list">
-          <article class="work-item">
-            <p class="work-item__meta">Portfolio / 2026</p>
-            <h3>Personal Website</h3>
-            <p>GitHub Pagesで公開する、自分の活動をまとめるためのホームページ。</p>
+      <section id="news" class="section section--news" aria-labelledby="news-title">
+        <h2 id="news-title">News</h2>
+        <div class="news-list">
+          <article class="news-year">
+            <h3>2026</h3>
+            <ul>
+              <li><time datetime="2026">2026</time> New HP is out!</li>
+              <!-- <li><time datetime="2026">2026</time> 新しい研究・活動情報を追加予定です。</li> -->
+            </ul>
           </article>
-          <article class="work-item">
-            <p class="work-item__meta">Project / Soon</p>
-            <h3>Next Project</h3>
-            <p>授業、研究、制作、趣味など、見せたいものをここに追加できます。</p>
+          <!-- <article class="news-year">
+            <h3>2025</h3>
+            <ul>
+              <li><time datetime="2025">2025</time> ここにニュースや発表実績を追加できます。</li>
+            </ul>
+          </article> -->
+        </div>
+      </section>
+
+      <section id="research" class="section section--research" aria-labelledby="research-title">
+        <h2 id="research-title">Research</h2>
+        <div class="research-list">
+          <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>Eyes on the Palm: Investigating a Ring-Shaped Camera for Seamless Accessible Tactile Exploration1</h3>
+              <p class="research-authors">Ayaka Tsutsui, Xiyue Wang, Hironobu Takagi, Yoichi Ochiai, Chieko Asakawa</p>
+              <p>
+                CHI 2026
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/full/10.1145/3772318.3791659">Paper</a>
+                <!-- <a href="#">PDF</a> -->
+              </div>
+            </div>
+          </article>
+
+            <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>AR Haptic-Audio Conversion for Non-Visual Product Understanding in Smartphone AR</h3>
+              <p class="research-authors">Satomi Tokida, Ayaka Tsutsui, Norimasa Kobori, Matthew Gillingham, Bektur Ryskeldiev</p>
+              <p>
+                CHI 2026 EA
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/full/10.1145/3772363.3798874">Paper</a>
+                <!-- <a href="#">PDF</a> -->
+              </div>
+            </div>
+          </article>
+
+            <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>Evaluating Tactile Perception of Robot-Controlled HIFU Embossing</h3>
+              <p class="research-authors">Ayaka Tsutsui, Takahito Murakami, Tatsuki Fushimi, Ryosei Kojima, Kengo Tanaka, Yoichi Ochiai</p>
+              <p>
+                HRI 2026 Poster
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/abs/10.1145/3776734.3794457">Paper</a>
+                <!-- <a href="#">PDF</a> -->
+              </div>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>Investigating “Touch and Talk” for Blind and Low Vision People: Science Communication Assistance Through Exploring Multiple Tactile Objects</h3>
+              <p class="research-authors">Ayaka Tsutsui, Xiyue Wang, Hironobu Takagi, Chieko Asakawa</p>
+              <p>
+                ASSETS 2025
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/full/10.1145/3663547.3746373">Paper</a>
+                <!-- <a href="#">PDF</a> -->
+              </div>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="research-image">
+              <span></span>
+            </div>
+            <div class="research-content">
+              <h3>From Cluttered to Clear: Improving the Web Accessibility Design for Screen Reader Users in E-commerce With Generative AI</h3>
+              <p class="research-authors">Yaman Yu, Bektur Ryskeldiev, Ayaka Tsutsui, Matthew Gillingham, Yang Wang</p>
+              <p>
+                ASSETS 2025
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/full/10.1145/3663547.3746353">Paper</a>
+                <!-- <a href="#">PDF</a> -->
+              </div>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="research-image">
+              <span></span>
+            </div>
+            <div class="research-content">
+              <h3>A Comparative Evaluation of GenAI-Assisted Tactile Graphics from the Perspective of Totally Blind Professionals in Tactile Graphic Supervision</h3>
+              <p class="research-authors">Kengo Tanaka, Ayaka Tsutsui, Yoichi Ochiai</p>
+              <p>
+                ASSETS 2025 Poster  
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/full/10.1145/3663547.3759740">Paper</a>
+                <!-- <a href="#">PDF</a> -->
+              </div>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>"I Am a Blind Seller!": Picture Taking Assistance for Visually Impaired Individuals for Participation as Sellers in Customer to Customer (C2C) Marketplaces</h3>
+              <p class="research-authors">
+                Ayaka Tsutsui, Kengo Tanaka, Yaman Yu, Bektur Ryskeldiev</p>
+              <p>
+                CHI 2025 EA  
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/full/10.1145/3706599.3720150">Paper</a>
+                <!-- <a href="#">Code</a> -->
+              </div>
+            </div>
+          </article>
+
+            <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>AccessibleShip: Exploring Packaging and Shipping Barriers for Visually Impaired Users in C2C E-Commerce</h3>
+              <p class="research-authors">
+                Kunal Gupta, Ken Takaki, Ayaka Tsutsui, Kentaro Teramoto, Bektur Ryskeldiev</p>
+              <p>
+                CHI 2025 EA  
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/full/10.1145/3706599.3706665">Paper</a>
+                <!-- <a href="#">Code</a> -->
+              </div>
+            </div>
+          </article>
+
+
+            <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>Dynamic caustics by ultrasonically modulated liquid surface</h3>
+              <p class="research-authors">
+                Koki Nagakura, Tatsuki Fushimi, Ayaka Tsutsui, Yoichi Ochiai</p>
+              <p>
+                Scientific reports 2025
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://www.nature.com/articles/s41598-025-16190-3">Paper</a>
+                <!-- <a href="#">Code</a> -->
+              </div>
+            </div>
+          </article>
+
+            <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>HIFU Embossment of Acrylic Sheets</h3>
+              <p class="research-authors">
+                Ayaka Tsutsui, Tatsuki Fushimi, Takahito Murakami, Ryosei Kojima, Kengo Tanaka, Yoichi Ochiai</p>
+              <p>
+                CHI 2024
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/full/10.1145/3613904.3642890">Paper</a>
+                <!-- <a href="#">Code</a> -->
+              </div>
+            </div>
+          </article>
+
+                      <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>Documentary Film of Low Vision Boxing: Collaborative Design of Adaptive Kickboxing Experiences</h3>
+              <p class="research-authors">
+                Kenta Yamamoto, Ayaka Tsutsui, Yinan Zhao, Ippei Suzuki, Kengo Tanaka, Yusuke Koroyasu, Yoichi Ochiai</p>
+              <p>
+                CHI 2024 EA 
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/full/10.1145/3613905.3649124">Paper</a>
+                <!-- <a href="#">Code</a> -->
+              </div>
+            </div>
+          </article>
+
+            <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>Low Vision Boxing: Participatory Design of Adaptive Kickboxing Experiences with Low Vision Person</h3>
+              <p class="research-authors">
+                Ayaka Tsutsui, Kenta Yamamoto, Yinan Zhao, Ippei Suzuki, Kengo Tanaka, Yoichi Ochiai</p>
+              <p>
+                ASSETS 2024
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/abs/10.1145/3663548.3675619">Paper</a>
+                <!-- <a href="#">Code</a> -->
+              </div>
+            </div>
+          </article>
+
+            <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>Dynamic Acousto-Caustics in Dual-Optimized Holographic Fields</h3>
+              <p class="research-authors">
+                Koki Nagakura, Tatsuki Fushimi, Ayaka Tsutsui, Yoichi Ochiai</p>
+              <p>
+                SIGGRAPH Emerging Technologies 2024
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/abs/10.1145/3641517.3664384">Paper</a>
+                <!-- <a href="#">Code</a> -->
+              </div>
+            </div>
+          </article>
+
+           <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>Text to Haptics: Method and Case Studies of Designing Tactile Graphics for Inclusive Tactile Picture Books by Digital Fabrication and Generative AI</h3>
+              <p class="research-authors">Kengo Tanaka, Tatsuki Fushimi, Ayaka Tsutsui, Yoichi Ochiai</p>
+              <p>
+                SIGGRAPH Labs 2023
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://dl.acm.org/doi/abs/10.1145/3588029.3595471">Paper</a>
+                <!-- <a href="#">PDF</a> -->
+              </div>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="research-image">
+              <span>Project Image</span>
+            </div>
+            <div class="research-content">
+              <h3>Ultrasonic Embossment of Acrylic Sheets with Transparency Control</h3>
+              <p class="research-authors">Ayaka Tsutsui, Tatsuki Fushimi, Kengo Tanaka, Takahito Murakami, and Yoichi Ochiai</p>
+              <p>
+                SIGGRAPH Labs 2023 
+              </p>
+              <div class="research-links">
+                <!-- <a href="#">Project Page</a> -->
+                <a href="https://doi.org/10.1145/3588029.3595475">Paper</a>
+                <!-- <a href="#">PDF</a> -->
+              </div>
+            </div>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="section section--contact">
-        <p class="section-label">Contact</p>
-        <h2>ご連絡はこちらから</h2>
-        <p>
-          メールアドレスやSNSリンクをここに入れます。公開したくない情報は無理に載せなくて大丈夫です。
-        </p>
-        <a class="button button--primary" href="mailto:hello@example.com">hello@example.com</a>
-      </section>
     </main>
 
     <footer class="site-footer">
